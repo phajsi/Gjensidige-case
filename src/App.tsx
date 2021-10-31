@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { fetchPokemon } from './utils';
-import { Pokemon } from './types';
+import React from "react";
 
-import InfoContainer from './components/InfoContainer';
+import InfoContainer from "./components/InfoContainer";
 
-import './app.css';
+import "./app.css";
 
 const App = () => {
-  const [pokemon, setPokemon] = useState<Pokemon>();
-
-  useEffect(() => {
-    fetchPokemon('bulbasaur').then((res) => setPokemon(res));
-  }, []);
-
   return (
-    <div className='appRoot'>
-      <InfoContainer pokemon={pokemon} />
+    <div className="appRoot">
+      <InfoContainer />
     </div>
   );
 };
