@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+
 import { Pokemon } from "../types";
-import { fetchPokemon } from "../utils";
 import styled from "styled-components";
 
 const Card = styled.div`
@@ -11,7 +11,8 @@ const Card = styled.div`
   font-size: 1rem;
   font-weight: 100;
   font-family: Arial, Helvetica, sans-serif;
-  border: 10px solid #f5d226;
+  border: 10px solid;
+  border-color: #f5d226;
   min-width: 28vw;
   max-height: 70vh;
   background: linear-gradient(143.38deg, #e1c737 0%, #ffe974 100%);
@@ -30,7 +31,8 @@ const Section = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  border: 4px solid #c6a607;
+  border: 4px solid;
+  border-color: #c6a607;
   width: 70%;
   margin: auto;
 `;
@@ -38,6 +40,9 @@ const ImgContainer = styled.div`
 const Img = styled.img`
   margin: 0 auto;
   padding: 5px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 `;
 
 const Info = styled(Section)`
@@ -72,11 +77,11 @@ const Divider = styled.div`
   margin: 0 auto;
 `;
 
-const InfoContainer: React.FunctionComponent = () => {
-  const [pokemon, setPokemon] = useState<Pokemon>();
-  useEffect(() => {
-    fetchPokemon("pikachu").then((res) => setPokemon(res));
-  }, []);
+interface Props {
+  pokemon?: Pokemon;
+}
+
+const InfoContainer: React.FunctionComponent<Props> = ({ pokemon }) => {
   if (pokemon) {
     return (
       <Card>

@@ -1,0 +1,25 @@
+mergin main onto searchbar branch
+# Conflicts:
+#	src/App.tsx
+#	src/app.css
+#	src/components/InfoContainer.tsx
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# interactive rebase in progress; onto 6071fc4
+# Last command done (1 command done):
+#    pick 3e403bc WIP: working on pokemon searchbar
+# No commands remaining.
+# You are currently rebasing branch 'searchbar' on '6071fc4'.
+#
+# Changes to be committed:
+#	modified:   package-lock.json
+#	modified:   package.json
+#	modified:   src/App.tsx
+#	modified:   src/app.css
+#	modified:   src/components/InfoContainer.tsx
+#	new file:   src/components/SearchBar.tsx
+#	new file:   src/searchContext.js
+#	modified:   src/utils.ts
+#
