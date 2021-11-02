@@ -5,6 +5,7 @@ import { Pokemon } from "./types";
 import InfoContainer from "./components/InfoContainer";
 
 import "./app.css";
+import Header from "./components/Header";
 
 const App = () => {
   const [pokemon, setPokemon] = useState<Pokemon>();
@@ -21,6 +22,7 @@ const App = () => {
   }, [pokemon]);
   return (
     <div className="appRoot">
+      <Header />
       <InfoContainer pokemon={pokemon} />
     </div>
   );
